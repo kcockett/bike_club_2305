@@ -17,6 +17,7 @@ describe 'BikeClub' do
     @biker2.learn_terrain!(:gravel)
     @biker2.learn_terrain!(:hills)
     @biker2.log_ride(@ride2, 65.0)
+    @biker2.log_ride(@ride1, 90.5)
   end
   describe '#initialize' do
     it 'should initialize' do
@@ -29,6 +30,14 @@ describe 'BikeClub' do
       expect(@club.members).to eq([])
       @club.add_member(@biker)
       expect(@club.members).to eq([@biker])
+    end
+  end
+  describe '#most_rides' do
+    it 'should the name of the rider with the most rides' do
+      @club.add_member(@biker)
+      @club.add_member(@biker2)
+
+      expect(@club.most_rides).to eq(@biker.name)
     end
   end
 end

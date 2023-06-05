@@ -8,4 +8,8 @@ class BikeClub
     @name = name
     @members = []
   end
+
+  def add_member(rider)
+    @members << rider if rider != nil
+  end
 end

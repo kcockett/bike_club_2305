@@ -1,6 +1,5 @@
 require 'rspec'
-require './lib/biker'
-require './lib/ride'
+require './lib/bike_club'
 
 describe 'BikeClub' do
   it 'should initialize' do

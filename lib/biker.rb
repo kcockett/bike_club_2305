@@ -9,4 +9,8 @@ class Biker
     @rides = {}
     @acceptable_terrain = []
   end
+
+  def learn_terrain!(new_terrain)
+    @acceptable_terrain << new_terrain
+  end
 end

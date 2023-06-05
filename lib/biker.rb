@@ -13,4 +13,6 @@ class Biker
   def learn_terrain!(new_terrain)
     @acceptable_terrain << new_terrain
   end
+
+  
 end

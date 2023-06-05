@@ -12,4 +12,8 @@ class BikeClub
   def add_member(rider)
     @members << rider if rider != nil
   end
+
+  def most_rides
+    (@members.max_by { |member| member.rides.size }).name
+  end
 end

@@ -20,8 +20,9 @@ describe 'Biker' do
   end
   describe '#learn_terrain!' do
     it 'should add to acceptable_terrain' do
-      @biker = Biker.new("Kenny", 30)
-      #
+      @biker.learn_terrain!(:gravel)
+      @biker.learn_terrain!(:hills)
+      expect(@biker.acceptable_terrain).to eq([:gravel, :hills])
     end
   end
 end

@@ -14,5 +14,11 @@ class Biker
     @acceptable_terrain << new_terrain
   end
 
-  
+  def log_ride(ride, time)
+    if @rides.has_key?(ride)
+      @rides[ride] << time
+    else
+      @rides[ride] = [time]
+    end
+  end
 end
